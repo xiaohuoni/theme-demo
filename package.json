@@ -3,6 +3,8 @@
   "private": true,
   "scripts": {
     "antd":"APP_ROOT=examples/antd-theme alita dev",
+    "antd-less":"APP_ROOT=examples/antd-theme-less alita dev",
+    "build":"APP_ROOT=examples/antd-theme-less alita build",
     "mobile":"APP_ROOT=examples/mobile5-theme alita dev",
     "format": "prettier --write ."
   },
