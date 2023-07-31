@@ -17,10 +17,9 @@ export default () => {
               return;
             }
             setTimeout(() => {
-              window.less
-                .modifyVars({
-                  '@primary-color': 'red',
-                })
+              window.less.modifyVars({
+                '@primary-color': 'red',
+              });
             }, 200);
           }
           if (!lessNodesAppended) {
