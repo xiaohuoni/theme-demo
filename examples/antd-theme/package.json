@@ -1,0 +1,17 @@
+{
+  "name": "@examples/antd-theme",
+  "private": true,
+  "scripts": {
+    "dev": "alita dev",
+    "build": "alita build",
+    "plugin": "alita plugin list",
+    "start": "npm run dev",
+    "g:css": "lessc --js --modify-var=\"ant-prefix=pcfactory\" ../../node_modules/.pnpm/antd@4.18.8_react-dom@17.0.2_react@17.0.2/node_modules/antd/dist/antd.variable.less  ./src/modified.css"
+  },
+  "dependencies": {
+    "antd": "4.18.8"
+  },
+  "devDependencies": {
+    "less": "^4.1.3"
+  }
+}
