@@ -3,8 +3,11 @@ import { useRef, useState } from 'react';
 import { compile, stringify, serialize } from 'stylis';
 
 function normalizeCSS(css: string, selector: string) {
-  if (!selector) return css;
-  const compiled = compile(`${selector} {${css}}`);
+  let mergeCss = css;
+  if (selector) {
+    mergeCss = `${selector} {${css}}`;
+  }
+  const compiled = compile(mergeCss);
   return serialize(compiled, stringify);
 }
 
