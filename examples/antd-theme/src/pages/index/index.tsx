@@ -30,6 +30,9 @@ export default () => {
               {
                --pcfactory-primary-color: red;
                --pcfactory-primary-color-hover: red;
+             }
+             .title{
+              color: blue
              }`,
           );
         }}
@@ -47,7 +50,7 @@ export default () => {
         切换
       </Button>
       <div >
-        <h1>antd</h1>
+        <h1 className='title'>antd</h1>
         <div>
           {Math.random()}
           <Button

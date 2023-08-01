@@ -8,6 +8,7 @@ export default () => {
   return (
     <ConfigProvider>
       <Button
+        className="abcss"
         type="primary"
         block
         size="large"
@@ -65,7 +66,7 @@ export default () => {
             size="large"
             onClick={() => setCount(count + 1)}
           >
-            点我计数加1134 {count}
+            点我计数加1 {count}
           </Button>
         </div>
       </div>

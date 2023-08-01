@@ -5,4 +5,5 @@ export default defineConfig({
   // 这个值在 appts 中被 getKeepAlive 修改
   keepalive: [/./],
   theme: {},
+  antd: {},
 });
