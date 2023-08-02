@@ -81,8 +81,8 @@ importers:
         specifier: 1.0.0
         version: 1.0.0
       antd-theme-webpack-plugin:
-        specifier: 1.2.0
-        version: 1.2.0
+        specifier: 1.3.9
+        version: 1.3.9(webpack@5.88.2)
       babel-plugin-import:
         specifier: ^1.13.8
         version: 1.13.8
@@ -4927,12 +4927,14 @@ packages:
       - postcss
       - strip-css-comments
 
-  /antd-theme-webpack-plugin@1.2.0:
-    resolution: {integrity: sha512-YpvwMWlOlGRhuHNrLM4csqvA7kBh7EaoovYHKybsEgz0qFi08Z2HmGsYTopM/pLdYrqoaqn6MoNkFxHuVGwBEg==}
+  /antd-theme-webpack-plugin@1.3.9(webpack@5.88.2):
+    resolution: {integrity: sha512-J/xYPqW8oZrk/UZslRODdKSLmhFlpLKuqL6GMHPoKib9u0RoIeVCUAD+IT4yRwIkFBYVIX0vlahnLvGHNEeMxA==}
+    peerDependencies:
+      webpack: ^4.0.0 || ^5.0.0
     dependencies:
       antd-theme-generator: 1.2.11
-      less-bundle-promise: 1.0.7
-      postcss: 6.0.23
+      webpack: 5.88.2(esbuild@0.18.17)
+      webpack-sources: 2.3.1
     dev: false
 
   /antd@4.18.8(react-dom@18.1.0)(react@18.1.0):
@@ -8146,11 +8148,6 @@ packages:
 
   /less-bundle-promise@1.0.11:
     resolution: {integrity: sha512-LozmEciljdXe0CwEH6uWTlpQDlOVM8d3kkj14P+Jeze/AUhaPZs02x6INJh4TYSeO5xw4RxkpzXTELZSkLKC6Q==}
-    engines: {node: '>=0.10.0'}
-    dev: false
-
-  /less-bundle-promise@1.0.7:
-    resolution: {integrity: sha512-B4mN+YtkOxAPUHyorhup+ETVNZ9E1PO65sPhgPvDDHDVtR1oYRd87EbYVYOsU0Oev0MW/6MSouS5QYlhe7XrzA==}
     engines: {node: '>=0.10.0'}
     dev: false
 
@@ -11753,6 +11750,10 @@ packages:
       sort-object-keys: 1.1.3
     dev: true
 
+  /source-list-map@2.0.1:
+    resolution: {integrity: sha512-qnQ7gVMxGNxsiL4lEuJwe/To8UnK7fAnmbGEEH8RpLouuKbeEm0lhbQVFIrNSuB+G7tVrAlVsZgETT5nljf+Iw==}
+    dev: false
+
   /source-map-js@1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
@@ -12764,6 +12765,14 @@ packages:
   /web-streams-polyfill@3.2.1:
     resolution: {integrity: sha512-e0MO3wdXWKrLbL0DgGnUV7WHVuw9OUvL4hjgnPkIeEvESk74gAITi5G606JtZPp39cd8HA9VQzCIvA49LpPN5Q==}
     engines: {node: '>= 8'}
+
+  /webpack-sources@2.3.1:
+    resolution: {integrity: sha512-y9EI9AO42JjEcrTJFOYmVywVZdKVUfOvDUPsJea5GIr1JOEGFVqwlY2K098fFoIjOkDzHn2AjRvM8dsBZu+gCA==}
+    engines: {node: '>=10.13.0'}
+    dependencies:
+      source-list-map: 2.0.1
+      source-map: 0.6.1
+    dev: false
 
   /webpack-sources@3.2.3:
     resolution: {integrity: sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==}

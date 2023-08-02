@@ -12,10 +12,10 @@ export default defineConfig({
   chainWebpack: (config) => {
     // if (process.env.NODE_ENV === 'production') {
     // 将所有 less 合并为一个供 themePlugin使用
-    const outFile = path.join(__dirname, '../.temp/merge.less');
+    const outFile = path.join(__dirname, '../node_modules/.temp/merge.less');
     const stylesDir = path.join(__dirname, '../src/');
 
-    config.plugin('merge-less').use(new MergeLessPlugin(), [
+    config.plugin('merge-less').use(MergeLessPlugin, [
       {
         stylesDir,
         outFile,

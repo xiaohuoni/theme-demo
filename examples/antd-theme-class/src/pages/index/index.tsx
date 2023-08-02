@@ -1,27 +1,6 @@
 import { Button, ConfigProvider } from 'antd';
 import { useRef, useState } from 'react';
-import { compile, stringify, serialize } from 'stylis';
-
-function normalizeCSS(css: string, selector: string) {
-  let mergeCss = css;
-  if (selector) {
-    mergeCss = `${selector} {${css}}`;
-  }
-  const compiled = compile(mergeCss);
-  return serialize(compiled, stringify);
-}
-
-function insertRules(id: string, rules: string, selector = document.head) {
-  if (document.getElementById(id)) {
-    const style = document.getElementById(id);
-    style!.innerHTML = rules;
-  } else {
-    const style = document.createElement('style');
-    style.id = id;
-    (selector ?? document.head).appendChild(style);
-    style.innerHTML = rules;
-  }
-}
+import { normalizeCSS, insertRules } from 'theme-utils';
 
 export default () => {
   const [count, setCount] = useState(0);
